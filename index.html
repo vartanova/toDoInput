@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
-    <select id="dropDown">
-        <option id="idOption" value="option1">Текст 1</option>
+    <h1>Выберите фильм</h1>
+    <select class="select_film" id="dropDown">
     </select>
     
-    <h1>Edit home</h1>
-    <input id="inputText" type="text" value="">
-    <button id="saveText">save</button>
-    <button id="clearText">clear</button>
+    <h1>Предложите фильм</h1>
+    <input class="select_film select-film__input" id="inputText" type="text" value="">
+    <div class="film__btns">
+        <button class="film__btn film__btn_add" id="saveText">Добавить</button>
+        <button class="film__btn film__btn_clear" id="clearText">Очистить</button>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
