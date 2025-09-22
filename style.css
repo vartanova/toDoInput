@@ -26,19 +26,23 @@ h1 {
     margin-bottom: 20px;
 }
 .film__btns {
-    display: flex;
-    width: 250px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    width: 500px;
 }
 .film__btn {
     font-size: 15px;
     background-color: transparent;
     border: 2px solid #2c365a;
     border-radius: 7px;
-    width: 120px;
+    width: 200px;
     height: 30px;
 }
-.film__btn_add:hover {
+
+
+.film__btn_add:hover,
+.film__btn_delete:hover {
     background-color: #2c365a;
     color: #EEE8DF;
     transition: .2s;
@@ -46,4 +50,10 @@ h1 {
 .film__btn_clear:hover {
     background-color: #c4bcb0;
     transition: .2s;
+}
+.film__btn_change:hover {
+    background-color: brown;
+    color: #EEE8DF;
+    transition: .2s;
+
 }
