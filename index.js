@@ -26,6 +26,7 @@ function saveInputValue (value) {
             newElem.textContent = value
             dropDown.prepend(newElem)
             newElem.id = 'idOption'
+            
 
         } else {inputText.value = 'Вы уже это вводили'}
     }
