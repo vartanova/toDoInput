@@ -73,7 +73,6 @@ function changeValue () {
             dropDown.options[i].textContent = currInputValue
         }
     }
-
 }
 
 
