@@ -70,15 +70,21 @@ inputText.onfocus = function () {
 }
 
 function changeValue () {
-    let currInputValue = inputText.value //здесь у нас новое значение
-    for (let i = 0; i < listsFilm.length; i++) {
-        if (dropDown.options[i].value === oldInputValue ) { //смотрю, если такой элемент уже существует, то его обновляю
-            dropDown.options[i].value = currInputValue
-            dropDown.options[i].textContent = currInputValue
-        }
-    }
-}
+    const currInputValue = inputText.value //здесь у нас новое значение
+    const oldInputValue = dropDown.value
+    const index = listsFilm.indexOf(currInputValue)
 
+    if (index !== -1) {
+        alert('Такой фильм уже существует')
+        return
+    }
+
+    const indexOld = listsFilm.indexOf(oldInputValue)
+
+    listsFilm[indexOld] = currInputValue
+    dropDown.options[indexOld].value = currInputValue
+    dropDown.options[indexOld].textContent = currInputValue
+}
 
 
 dropDown.addEventListener('change', selectValue)
