@@ -11,7 +11,7 @@ function clearText () {
     inputText.value = ""
 }
 
-const listsFilm = ['Harry Potter', 'Charmed']
+const listsFilm = ['Гарри Поттер', 'Исчезнувшая', 'Остров проклятых', 'Красивей тебя']
 
 function addFilm (film) { //вынесла в отдельную функцию создание нового фильма
     const option = document.createElement('option')
@@ -37,6 +37,9 @@ function addNewFilm () {
     } else { //если такой фильм нашелся в списке, то 
         alert('Вы это уже вводили')
     }
+    clearText()
+    selectValue()
+
 }
   
 function selectValue () {
@@ -56,6 +59,7 @@ function deleteValue () {
             dropDown.remove(i)
             inputText.value = ""
         }
+        selectValue()
     }
 }
 
@@ -77,7 +81,7 @@ function changeValue () {
 
 
 
-dropDown.onchange = selectValue
+dropDown.addEventListener('change', selectValue)
 saveBtn.addEventListener('click', addNewFilm)
 clearBtn.addEventListener('click', clearText)
 deleteBtn.addEventListener('click', deleteValue)
