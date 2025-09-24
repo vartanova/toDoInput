@@ -82,7 +82,7 @@ function changeValue () {
 
 
 
-dropDown.onchange = selectValue
+dropDown.addEventListener('change', selectValue)
 saveBtn.addEventListener('click', addNewFilm)
 clearBtn.addEventListener('click', clearText)
 deleteBtn.addEventListener('click', deleteValue)
