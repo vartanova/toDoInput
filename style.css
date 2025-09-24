@@ -20,11 +20,12 @@ h1 {
     border: 2px solid #2c365a;
     border-radius: 10px;
     margin-bottom: 50px;
-}
-
-.select-film__input {
     margin-bottom: 20px;
 }
+.select_film::placeholder {
+    font-size: 15px;
+}
+
 .film__btns {
     display: grid;
     grid-template-columns: 1fr 1fr;
